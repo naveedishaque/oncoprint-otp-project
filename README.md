@@ -1,22 +1,12 @@
 # oncoprint-otp-project
 a set of scripts to prepare a project organized by OTP for oncoprint plotting
 
-
-# How to run
-
-```
-echo "modify the perl script project path, prefix, suffix and subfolder paths"
-perl make_oncoprint_table.pl -o MY_OUT_PREFFIX
-module loads R/3.3.1
-R -f make_oncoprint_plot.R --no-save --no-restore --args MY_OUT_PREFFIX.VERSION.min6.kataegis6.sv100000.cnv0.3.onco_print.tsv MY_OUT_PREFFIX.VERSION.min6.kataegis6.sv100000.cnv0.3.sample_info.tsv
-```
-
 ## Prerequisites
 
 - A project directory structure set up by https://github.com/naveedishaque/otp-project-softlinker
 - ~~Developed using perl 5, version 26, subversion 1 (v5.26.1) built for x86_64-linux-gnu-thread-multi~~ 
 
-## Installation
+## Installation and usage
 ```
 # First download the repo
 git clone https://github.com/naveedishaque/oncoprint-otp-project.git
