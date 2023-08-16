@@ -150,7 +150,7 @@ my $min_recurrence = 1;
 #my $top_cnv_recurrence = 6; # not used anywhere else
 my $sv_close="100000";
 my $chr_arm_level_CNV_percentage = 0.3; 
-my $threshold_cnv = 0.3;
+my $threshold_cnv = 0.5;
 
 # exclusion list
 my %exclusion_list=();
