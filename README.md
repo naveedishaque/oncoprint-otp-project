@@ -29,6 +29,31 @@ This should create a set of files including `onco_print...csv` and `sample_info.
 ```
 R -f make_oncoprint_plot.R --no-save --no-restore --args --input_table <onco_print table from make_oncprint_table.pl> -sampleinfo_table <sample_info table from make_oncprint_table.pl> --min_recurrence=4 --cnas_num=6
 ```
+## IntOGen
+
+The script also produces the input to run IntOGen. To setup IntOGen:
+
+```
+conda create -n intogen_manual python=3.5.1  -c conda-forge
+conda activate intogen_manual
+conda install perl=5.20.3.1  -c conda-forge
+pip install numpy scipy pandas drmaa==0.7.9
+cpan App::cpanminus
+cpanm Digest::MD5
+cpanm DBI
+cpanm threads
+pip install intogen==3.0.8 oncodriveclust==1.0.0 oncodrivefm==1.0.3
+conda install python=3.5.3  -c conda-forge # it turns out that 3.5.1 has an older version of the typing library, so you need >=3.5.3. I didn't have time to try using the right version of python from the start :/
+intogen --setup
+```
+You then need to download MutSigCV and set it up to run with MCR:
+```
+# instructions coming soon
+```
+To run IntOGen:
+```
+# instructons coming soon
+```
 
 ## Versioning
 
