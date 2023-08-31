@@ -98,9 +98,9 @@ my $version_noDots = "v015"; # else intogen will not work
 #######################
 
 my $results_dir = "/icgc/dkfzlsdf/analysis/hipo/my_hipo_project/whole_genome_sequencing/results_per_pid/";
-my $genome_fai = "/icgc/ngs_share/assemblies/hg19_GRCh37_1000genomes/sequence/1KGRef/hs37d5.fa.fai";
-my $chrom_arms = "/icgc/ngs_share/assemblies/hg19_GRCh37_1000genomes/stats/hg19armsizesXY.plain.bed";
-my $genes_bed = "/icgc/ngs_share/assemblies/hg19_GRCh37_1000genomes/databases/gencode/gencode19/gencode.v19.annotation_plain.genes.bed";
+my $genome_fai = "/applications/otp/ngs_share_complete/assemblies/hg19_GRCh37_1000genomes/sequence/1KGRef/hs37d5.fa.fai";
+my $chrom_arms = "/applications/otp/ngs_share_complete/assemblies/hg19_GRCh37_1000genomes/stats/hg19armsizesXY.plain.bed";
+my $genes_bed = "/applications/otp/ngs_share_complete/assemblies/hg19_GRCh37_1000genomes/databases/gencode/gencode19/gencode.v19.annotation_plain.genes.bed";
 
 ####################
 ## FILE VARIABLES ##
@@ -539,7 +539,7 @@ mutsig_vep_dictionary = "%(bgdata://intogen/ensembl/1.0)/consequence_classificat
 mutsig_exome_coverage = "%(bgdata://intogen/mutsigcov/1.0)/exome_full192.coverage.txt"
 mutsig_covariates = "%(bgdata://intogen/mutsigcov/1.0)/gene.covariates.txt"
 mutsig_hg19_path = "%(bgdata://datasets/genomereference/hg19)"
-matlab_mcr = "/ibios/tbi_cluster/13.1/x86_64/matlab/MATLAB_Compiler_Runtime_R2013a/v81"
+matlab_mcr = "/dh-projects/ag-ishaque/analysis/software/MATLAB_Runtime/v81"
 ';
 
 my $task_conf ='[annotation]
@@ -610,7 +610,7 @@ close($task_conf_fh);
 close($scheduler_conf_fh);
 close($system_conf_fh);
 
-`cp -R /icgc/ngs_share/general/intogen/MutSigCV_1.4/* $intogen_dir/MutSig && chmod 777 -R $intogen_dir/MutSig`;
+`cp -R /dh-projects/ag-ishaque/analysis/software/MutSigCV_1.4* $intogen_dir/MutSig && chmod 777 -R $intogen_dir/MutSig`;
 
 my $vcf_file_list = "";
 
