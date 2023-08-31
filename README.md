@@ -46,11 +46,18 @@ pip install intogen==3.0.8 oncodriveclust==1.0.0 oncodrivefm==1.0.3
 conda install python=3.5.3  -c conda-forge # it turns out that 3.5.1 has an older version of the typing library, so you need >=3.5.3. I didn't have time to try using the right version of python from the start :/
 intogen --setup
 ```
-You then need to download MutSigCV and set it up to run with MCR:
+You then need to download MutSigCV and set it up to run with MCR. First setting up MCR
 ```
-# instructions coming soon
+# install MCR
+cd /path/to/where/to/install/
+wget https://ssd.mathworks.com/supportfiles/MCR_Runtime/R2013a/MCR_R2013a_glnxa64_installer.zip
+unzip MCR_R2013a_glnxa64_installer.zip
+./install  -mode silent -agreeToLicense yes -outputFile myapp_log.txt -destinationFolder /path/to/where/to/install/MATLAB_Runtime
+
 ```
-To run IntOGen:
+To install MutSigCV check out their github: https://github.com/getzlab/MutSig2CV
+
+Then, finally to run IntOGen:
 ```
 # instructons coming soon
 ```
